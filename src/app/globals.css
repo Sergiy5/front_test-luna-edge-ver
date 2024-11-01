@@ -19,3 +19,25 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+main {
+  @apply md:h-lvh md:bg-[url('/bg-image_main.webp')] md:bg-cover md:bg-no-repeat xl:h-auto tracking-wide;
+}
+
+.container {
+  @apply px-8 py-4 md:px-[72px] md:py-20 md:w-[540px] rounded-lg xl:w-[480px] xl:h-auto bg-bgContent xl:px-10 xl:py-[64px] xl:rounded-[8px];
+}
+h1{
+    @apply font-semibold text-[24px] leading-[120%] tracking-[-0.02em] text-[#134267]
+}
+
+h2{
+  @apply font-medium text-[14px] leading-[150%] tracking-[-0.01em] text-bgBtn
+}
+h3{
+  @apply font-semibold text-[20px] leading-[100%] tracking-[-0.02em] text-center text-[#134267]
+}
+
+p{
+  @apply font-normal text-[12px] leading-[150%] tracking-[-0.01em] text-labelInputColor
+}

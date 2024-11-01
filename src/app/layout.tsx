@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const interFont = Inter({
+  variable: "--font-inter",
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const eudoxusSans = localFont({
+  src: "./fonts/EudoxusSans-Bold.woff",
+  variable: "--font-eudoxusSans-Bold",
+  weight: "700",
 });
 
 export const metadata: Metadata = {
@@ -26,9 +27,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${interFont.variable} ${eudoxusSans.variable} antialiased`}
       >
-        {children}
+            {children}
       </body>
     </html>
   );
